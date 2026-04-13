@@ -20,11 +20,17 @@ François es una aplicación web 100% privada y offline diseñada para enseñar 
 
 ---
 
-## 🚀 Requisitos Previos
+## 🚀 Requisitos Previos e Instalación de la IA
 
-1.  [Node.js](https://nodejs.org/es/) (Versión 18 o superior)
-2.  [Ollama](https://ollama.com/) instalado en tu entorno local.
-3.  **Google Chrome** (Para que el reconocimiento de voz funcione de forma nativa sin consumir recursos locales).
+Antes de ejecutar la aplicación, es necesario preparar el entorno de Inteligencia Artificial que servirá de cerebro para François.
+
+1.  **Descargar Ollama**: Ve a [ollama.com](https://ollama.com/) y descarga la versión correspondiente a tu sistema operativo (Windows, macOS o Linux). Instálalo como cualquier otra aplicación.
+2.  **Descargar el Modelo**: Una vez instalado Ollama, abre una terminal (PowerShell o CMD) y ejecuta el siguiente comando para descargar el modelo Gemma 3 de Google (optimizado para tutoría):
+    ```bash
+    ollama pull gemma3:4b
+    ```
+3.  **Navegador**: Se recomienda usar **Google Chrome** para garantizar la compatibilidad total con la Web Speech API (reconocimiento de voz nativo).
+4.  **Entorno de Desarrollo**: Tener instalado [Node.js](https://nodejs.org/) (v18+).
 
 ---
 
@@ -33,7 +39,7 @@ François es una aplicación web 100% privada y offline diseñada para enseñar 
 Sigue los siguientes comandos paso a paso para arrancar a François en tu PC:
 
 ### 1. Activar Localmente la IA (Ollama)
-El servidor depende del modelo `gemma3:4b` actuando como cerebro logico. En una nueva consola:
+En una consola, deja corriendo el servicio del modelo:
 
 ```bash
 ollama run gemma3:4b
